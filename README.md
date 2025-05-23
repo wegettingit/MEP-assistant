@@ -1,44 +1,32 @@
-# 🧠 MEP Command Map (v1)
+# 🧠 MEP-assistant  
+The AI kitchen brain behind johnE.ai — task tracking, inventory, shift logic, and ethical automation.
 
-This doc outlines supported commands for the Mise en Place assistant AI.  
-Each command is handled by a GPT logic layer or future API-to-database integration.
-
----
-
-## 💬 Command Syntax
-
-### `!assign [Name] [Task]`
-Assigns a task to a staff member.  
-Example:
-```plaintext
-!assign Frey restock veg bins
-!status
-Returns current active staff, urgent tasks, and completed items.
-
-!911 or !86d
-Flags an item or task as urgent or unavailable.
-Example: !911 chicken thighs
-!quote
-Returns a motivational or philosophical quote for the shift.
-Pulled from a rotating GPT list.
-!inventory [item] [amount]
-Updates the kitchen’s inventory count manually.
-Example: !inventory eggs 6
-🛠️ Planned Additions
-!menu – pulls the daily menu for context-sensitive recommendations
-
-!prepboard – returns outstanding prep
-
-!shiftnotes – logs comments from staff or chefs
+## 🍳 MEP – Mise en Place Assistant  
+**MEP** is the kitchen memory and task brain for the johnE.ai platform.  
+Built to support chefs, dish staff, and kitchen managers with real-time task tracking, inventory status, and shift-based communication tools.
 
 ---
 
-<!-- MEP Kitchen Assistant Embed -->
-<iframe
-  src="https://typebot.io/cmb086vjm001hpb8eqk7enlwhu"
-  style="width:100%; height:600px; border:none;"
-  allow="clipboard-write"
-  title="Talk to MEP – Your Kitchen Assistant">
-</iframe>
+## 🔗 Try MEP Live  
+Test the assistant now via the public chatbot:
+
+👉 [Launch MEP – Your Kitchen Assistant](https://typebot.co/mep-mise-en-place-ai-7en1whu)
+
+No login required. All logic is flow-based and visible in this repo.
 
 ---
+
+## 🛠️ Core Commands (Typed or Tapped)
+- `assign Frey veg bins` → assign tasks
+- `86 chicken` or `911 onions` → flag 86'd items
+- `quote` → get shift motivation
+- `inventory eggs 6` → update count
+
+You can type these naturally in MEP. It understands most kitchen phrasing.
+
+---
+
+## ⚙️ Powered By  
+- Built using [Typebot](https://typebot.io)  
+- AI logic (via OpenAI GPT-4 or API bridge)  
+- Project by [johnE.ai](https://johnE.ai)  
