@@ -1,32 +1,25 @@
-# 🧠 MEP-assistant  
-The AI kitchen brain behind johnE.ai — task tracking, inventory, shift logic, and ethical automation.
+# MEP v1.5 — Mise En Place AI Assistant
 
-## 🍳 MEP – Mise en Place Assistant  
-**MEP** is the kitchen memory and task brain for the johnE.ai platform.  
-Built to support chefs, dish staff, and kitchen managers with real-time task tracking, inventory status, and shift-based communication tools.
+Built by Johne (johnE.ai)  
+Date: May 23, 2025
 
----
+## Features
+- Adaptive AI assistant for kitchen staff
+- Role-specific tone and logic (Chef, Prep, Dish, etc.)
+- Natural language command routing (e.g. “Frey veg”, “86 freezer”)
+- Connected to task assignment, inventory, quotes, status check
+- Hosted on Typebot (public demo link: https://typebot.co/mep-mise-en-place-ai-7en1whu)
 
-## 🔗 Try MEP Live  
-Test the assistant now via the public chatbot:
+## Version Highlights
+- Added slang-aware keyword detection
+- Fully linked command routing
+- Confirmation popup with crew onboarding
+- Designed for use on phone, tablet, or back-of-house screens
 
-👉 [Launch MEP – Your Kitchen Assistant](https://typebot.co/mep-mise-en-place-ai-7en1whu)
-
-No login required. All logic is flow-based and visible in this repo.
-
----
-
-## 🛠️ Core Commands (Typed or Tapped)
-- `assign Frey veg bins` → assign tasks
-- `86 chicken` or `911 onions` → flag 86'd items
-- `quote` → get shift motivation
-- `inventory eggs 6` → update count
-
-You can type these naturally in MEP. It understands most kitchen phrasing.
+## Export File
+Filename: mep_v1.5_typebot_export.json  
+Stored locally and in IP archive
 
 ---
 
-## ⚙️ Powered By  
-- Built using [Typebot](https://typebot.io)  
-- AI logic (via OpenAI GPT-4 or API bridge)  
-- Project by [johnE.ai](https://johnE.ai)  
+© 2025 JohnE.ai — All rights reserved.
