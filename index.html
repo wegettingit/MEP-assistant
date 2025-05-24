@@ -2,52 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEP — Mise en Place</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="The worker-first culinary platform built from the pit up — johnE.ai">
+  <title>johnE.ai — AI with a soul</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap" rel="stylesheet" />
+
+  <!-- Styling -->
   <style>
     body {
+      font-family: 'Martian Mono', monospace;
+      background: #ffffff;
+      color: #111;
       margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-      background-image: url('your-tape-image-url.png'); /* optional */
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+      padding: 2rem;
+      line-height: 1.6;
+      text-align: center;
     }
-    .branding {
-      position: absolute;
-      top: 2rem;
-      left: 2rem;
-      font-size: 2rem;
-      font-weight: bold;
-      color: limegreen;
+
+    h1, h2, h3 {
+      margin: 1.5rem 0 0.75rem;
+    }
+
+    a.button {
+      display: inline-block;
+      margin: 1.5rem auto;
+      padding: 0.75rem 1.5rem;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    #mepButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1e1e1e;
+      color: #64ff64;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 9999;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    #mepChat {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 320px;
+      height: 420px;
+      background: #111;
+      color: #fff;
+      font-family: monospace;
+      padding: 14px;
+      border-radius: 16px;
+      z-index: 9999;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    #mepChat p { margin-bottom: 10px; }
+    #mepInput {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      background: #222;
+      color: #64ff64;
+      border: none;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
-  <div class="branding">johnE.ai — MEP</div>
+  <h1>We’re cooking something new.</h1>
+  <h2>Built by workers, for workers.</h2>
+  <h3>This is AI with a soul.</h3>
 
-  <!-- Typebot Embed -->
+  <a href="https://docs.google.com/document/u/0/d/1nXw5I4yh8PJWTRuSwrZYUgRaxExY7x_j/mobilebasic" class="button">Kitchen Closed (APPLY!!)</a>
+  <a href="#intro" class="button">Learn More</a>
+
+  <section id="intro" style="max-width: 900px; margin: auto; margin-top: 3rem;">
+    <h1>🧠 johnE.ai</h1>
+    <p><strong>AI meets mise en place.</strong><br>
+    Built by real prep cooks for the future of food work.</p>
+
+    <p>johnE.ai is a worker-first AI platform that simplifies scheduling, inventory, and kitchen communication. 
+      No fluff. No corporate creep. Just faster flow and real-time backup for people who move fast.
+    </p>
+
+    <h2>🧰 What’s Inside</h2>
+    <ul style="text-align: left; max-width: 600px; margin: auto;">
+      <li><strong>Fló</strong> — Shift-balanced, green-themed kitchen scheduler</li>
+      <li><strong>MEP</strong> — AI assistant for tasks, 86s, inventory, and memory</li>
+      <li><strong>Docs</strong> — Recipes, systems, prep bibles</li>
+      <li><strong>Ethics</strong> — Centered on cooks, not capital</li>
+    </ul>
+
+    <h2>🚀 Try MEP</h2>
+    <a href="https://typebot.co/mep-mise-en-place-ai-7en1whu" target="_blank" class="button">🗣️ Talk to MEP – Live Assistant</a>
+
+    <h2>🎯 Why?</h2>
+    <p>Because food workers deserve tech that respects them.<br>
+      We’ve seen the breakdowns — last-minute schedules, broken prep flow, burnout. johnE.ai is here to fix that.
+    </p>
+
+    <h2>🛠️ Open Kitchen Ethos</h2>
+    <p>We’re open to dev collabs, grant partners, and hospitality rebels.<br>
+      Reach out via <a href="https://github.com/wegettingit" target="_blank">GitHub</a> or 
+      <a href="mailto:johnethany@icloud.com">email</a>.
+    </p>
+  </section>
+
+  <footer>
+    JohnE, LLC — Oklahoma City, OK<br>
+    © 2025 johnE.ai · All rights reserved<br>
+    Built for kitchens. Powered by real work.
+  </footer>
+
+  <button id="mepButton">🧠</button>
+  <div id="mepChat">
+    <p><strong>MEP:</strong> I’m the brain of the new food industry.<br>Tell me what you’re working on — I’ll keep your hands moving and your mind clear.</p>
+    <div id="mepResponse" style="height: 260px; overflow-y: auto; font-size: 14px;"></div>
+    <input type="text" id="mepInput" placeholder="Type something..." />
+  </div>
+
   <script>
-    window.typebotInit = function () {
-      window.typebot.open({
-        typebot: "mep-mise-en-place-ai-7en1whu",
-        previewMessage: false,
-        bubble: true,
-        theme: {
-          button: {
-            backgroundColor: "#3CB371"
-          }
-        }
-      });
+    const mepButton = document.getElementById("mepButton");
+    const mepChat = document.getElementById("mepChat");
+    const mepInput = document.getElementById("mepInput");
+    const mepResponse = document.getElementById("mepResponse");
+
+    mepButton.onclick = () => {
+      mepChat.style.display = mepChat.style.display === "none" ? "block" : "none";
     };
+
+    async function askMEP(inputText) {
+      mepResponse.innerHTML += `<p><strong>You:</strong> ${inputText}</p>`;
+      const headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer sk-xyzYourWholeSecretKey"
+      };
+      const body = {
+        model: "gpt-4o",
+        messages: [
+          { role: "system", content: "You are MEP, the AI brain of the new food industry..." },
+          { role: "user", content: inputText }
+        ]
+      };
+      try {
+        const response = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: headers,
+          body: JSON.stringify(body)
+        });
+        const data = await response.json();
+        const answer = data.choices?.[0]?.message?.content || "I'm thinking...";
+        mepResponse.innerHTML += `<p><strong>MEP:</strong> ${answer}</p>`;
+        mepResponse.scrollTop = mepResponse.scrollHeight;
+      } catch {
+        mepResponse.innerHTML += `<p><strong>MEP:</strong> Error reaching the brain. Try again later.</p>`;
+      }
+      mepInput.value = "";
+    }
+
+    mepInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        const input = mepInput.value.trim();
+        if (input) askMEP(input);
+      }
+    });
   </script>
-  <script src="https://cdn.typebot.io/init.js"></script>
 </body>
 </html>
