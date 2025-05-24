@@ -8,7 +8,7 @@ Date: May 23, 2025
 - Role-specific tone and logic (Chef, Prep, Dish, etc.)
 - Natural language command routing (e.g. “Frey veg”, “86 freezer”)
 - Connected to task assignment, inventory, quotes, status check
-- Hosted on Typebot (public demo link: https://typebot.co/mep-mise-en-place-ai-7en1whu)
+- Hosted on Typebot (public demo link:https://chatgpt.com/g/g-683117aaa21c81919718d7ccf3802b96-mep)
 
 ## Version Highlights
 - Added slang-aware keyword detection
