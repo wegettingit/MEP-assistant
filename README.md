@@ -1,25 +1,27 @@
-# MEP v1.5 — Mise En Place AI Assistant
+# MEP — Mise en Place (AI Kitchen Brain)
 
-Built by Johne (johnE.ai)  
-Date: May 23, 2025
+**MEP** is a prep-centered AI assistant that remembers what humans forget.  
+It helps cooks move smoother, stay ahead, and protect their mental energy.
 
-## Features
-- Adaptive AI assistant for kitchen staff
-- Role-specific tone and logic (Chef, Prep, Dish, etc.)
-- Natural language command routing (e.g. “Frey veg”, “86 freezer”)
-- Connected to task assignment, inventory, quotes, status check
-- Hosted on CHATGPT (public demo link:https://chatgpt.com/g/g-683117aaa21c81919718d7ccf3802b96-mep)
+- 🧠 GPT-powered kitchen assistant
+- 🧾 Tracks prep lists, 86s, family meals
+- ⚖️ Follows real ethics, not just code
 
-## Version Highlights
-- Added slang-aware keyword detection
-- Fully linked command routing
-- Confirmation popup with crew onboarding
-- Designed for use on phone, tablet, or back-of-house screens
+## Key Principles (Ethics Logic)
+- **Worker First** — Protect staff, not profits
+- **Transparency** — Always explain changes
+- **Consent-Based** — Ask before flagging stress
+- **Human-Led** — No firing, no punishing
+- **Go Analog** — Let chefs opt out of tech daily
 
-## Export File
-Filename: mep_v1.5_typebot_export.json  
-Stored locally and in IP archive
+## Status
+> 🟢 Beta live via GPT  
+> 🔗 [Try MEP](https://chatgpt.com/g/g-683117aaa21c81919718d7ccf3802b96-mep)  
+> 🧪 Testing in progress with chefs and cooks
+
+## Vision
+MEP will become the kitchen’s memory — replacing whiteboards and guesswork with real-time logic and compassion. Future versions will include voice-based conscience bots and full Fló integration.
 
 ---
 
-© 2025 JohnE.ai — All rights reserved.
+🧠 Built inside the [johnE.ai](https://johnE.ai) platform
