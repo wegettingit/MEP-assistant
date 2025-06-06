@@ -1,30 +1,52 @@
-# MEP Assistant – Setup Guide
+# MEP Assistant (johnE.ai prototype)
 
-## Prerequisites
-- [x] Python 3.10+ installed
-- [x] Node.js + npm installed
-- [x] Ollama installed (`https://ollama.com/`)
-- [x] Ollama model pulled: `ollama run llama3:8b`
+## 🚀 Quick Start
 
-## Quick Start
-1. Run Ollama (`ollama run llama3:8b`).
-2. Run the Flask backend:
+1. **Requirements**
+    - Node.js
+    - Python 3.8+
+    - Ollama (local LLMs, e.g., `llama3:8b`)
 
-python mep_api.py
+2. **Install backend dependencies:**
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-3. Double-click `MEP Assistant.exe` (in /out folder after install).
+3. **Install frontend dependencies:**
+    ```sh
+    npm install
+    ```
+
+4. **Run Ollama & load the model**
+    - `ollama serve`
+    - `ollama run llama3:8b`
+
+5. **Run the backend:**
+    ```sh
+    python mep_api.py
+    ```
+
+6. **Run the Electron app:**
+    ```sh
+    npm start
+    ```
+
+## ✨ More info
+- See [Ollama docs](https://ollama.com/) for model help.
+- For issues, DM [your contact].
 
 ---
 
-## 6. **BONUS: Automate All of This**
-- Write a `.bat` file or use [electron-builder](https://www.electron.build/) or [pkg](https://github.com/vercel/pkg) to make a single .exe that runs all the parts in one go.
-- Or reach out for help and I’ll give you the code for a “double-click-to-launch-everything” experience!
+### **TL;DR:**
+- **Yes, it’s just a zip and instructions** right now.
+- That’s fine for technical/early users.
+- To make it even easier, “build” your Electron app into an installer in the future!
 
 ---
 
-**Summary:**
-- **For hackers:** Zip your folder, add a README, and share.
-- **For normal users:** Use `npm run make` to generate an installer, zip the output, and provide instructions for Python/Ollama.
+If you want to take the next step (packaging as a real installer, or even bundling the backend!), **just say the word**—I’ll give you a step-by-step guide for that.
 
-If you want a step-by-step to make a “one-click-for-everything” experience, just ask!  
-Let me know if you want a **clean zip/installer script template** for your exact setup!
+**Let me know if you want:**
+- a sample README
+- packaging/installer instructions
+- advice on what to add next!
