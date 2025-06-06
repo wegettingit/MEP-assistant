@@ -1,67 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MEP Assistant</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #bcc2cb 0%, #e8eaef 100%);
+        /* Simulated stainless steel texture using a gradient */
+        font-family: 'Segoe UI', Arial, sans-serif;
+      }
+      .chat-tab {
+        background: #b48be3; /* Pastel purple */
+        border-radius: 16px 16px 0 0;
+        width: 360px;
+        margin: 80px auto 0;
+        padding: 0;
+        box-shadow: 0 8px 32px rgba(80,80,100,0.25);
+        border-bottom: 4px solid #fff;
+      }
+      .chat-header {
+        padding: 18px;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 1.35rem;
+      }
+      .chat-box {
+        background: #fff;
+        border-radius: 0 0 16px 16px;
+        padding: 28px 18px 18px 18px;
+        min-height: 220px;
+        max-height: 360px;
+        overflow-y: auto;
+      }
+      .prompt-row {
+        display: flex;
+        border-top: 1px solid #e5e5ee;
+        padding: 14px;
+        background: #f5f5fa;
+        border-radius: 0 0 16px 16px;
+      }
+      .prompt-row input {
+        flex: 1;
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 1px solid #bbb;
+        outline: none;
+        font-size: 1rem;
+        background: #f9faff;
+        margin-right: 10px;
+      }
+      .prompt-row button {
+        padding: 10px 22px;
+        border-radius: 8px;
+        background: #b48be3;
+        color: #fff;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .prompt-row button:hover {
+        background: #7d52ad;
+      }
+      .message {
+        margin: 8px 0;
+        padding: 10px 14px;
+        background: #ece9fa;
+        color: #563884;
+        border-radius: 8px;
+        max-width: 90%;
+        word-break: break-word;
+      }
+      .bot {
+        background: #f0f5ff;
+        color: #2c3355;
+        align-self: flex-start;
+      }
+      .user {
+        background: #e0f2f1;
+        color: #167a6a;
+        align-self: flex-end;
+        margin-left: auto;
+      }
+      .messages {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-tab">
+      <div class="chat-header">MEP Assistant</div>
+      <div class="chat-box">
+        <div class="messages" id="messages"></div>
+      </div>
+      <form class="prompt-row" id="prompt-form" autocomplete="off">
+        <input id="prompt-input" placeholder="Type your message..." />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <script>
+      const form = document.getElementById('prompt-form');
+const input = document.getElementById('prompt-input');
+const messages = document.getElementById('messages');
 
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>johnE.ai</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 2rem;
-      background: white;
-      color: black;
-    }
-    a {
-      color: blue;
-      text-decoration: underline;
-    }
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.85rem;
-    }
-    .branding {
-      text-align: center;
-      margin-top: 4rem;
-    }
-    .branding img {
-      width: 24px;
-      vertical-align: middle;
-    }
-  </style>
-</head>
-<body>
-  <ul>
-    <li><a href="https://docs.google.com/document/u/0/d/1nXw5I4yh8PJWTRuSwrZYUgRaxExY7x_j/mobilebasic">Kitchen Closed (APPLY!!)</a></li>
-  </ul>
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const userMsg = input.value.trim();
+  if (!userMsg) return;
+  addMessage(userMsg, 'user');
+  input.value = '';
+  // Real backend call!
+  try {
+    const res = await fetch('http://localhost:5000/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: userMsg })
+    });
+    const data = await res.json();
+    addMessage(data.response, 'bot');
+  } catch (err) {
+    addMessage("⚠️ Couldn't reach backend: " + err.message, 'bot');
+  }
+});
 
-  <ul>
-    <li><a href="#learnmore">Learn More</a></li>
-  </ul>
+    form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const userMsg = input.value.trim();
+  if (!userMsg) return;
+  addMessage(userMsg, 'user');
+  input.value = '';
+  // Real backend call!
+  try {
+    const res = await fetch('http://localhost:5000/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: userMsg })
+    });
+    const data = await res.json();
+    addMessage(data.response, 'bot');
+  } catch (err) {
+    addMessage("⚠️ Couldn't reach backend: " + err.message, 'bot');
+  }
+});
 
-  <div class="footer">
-    JohnE, LLC<br />
-    Oklahoma City, OK<br />
-    © 2025 JohnE.ai · All rights reserved<br />
-    Built for kitchens. Powered by real work.
-  </div>
 
-  <h1># We’re cooking something new.</h1>
-  <h2>### Built by workers, for workers.</h2>
-  <h3>#### This is AI with a soul.</h3>
-
-  <div class="branding">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Emoji_u1f4e0.svg/1024px-Emoji_u1f4e0.svg.png" alt="Pink Tape" />
-    <strong>johnE.ai</strong>
-    <p>AI meets mise en place.</p>
-  </div>
-
-  <!-- Typebot Chat Button -->
-  <script>
-    window.typebotInit = function () {
-      window.typebot.open("https://typebot.co/mep-mise-en-place-ai-7en1whu");
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@typebot.io/browser"></script>
-</body>
+      function addMessage(text, who = 'bot') {
+        const msg = document.createElement('div');
+        msg.className = `message ${who}`;
+        msg.innerText = text;
+        messages.appendChild(msg);
+        messages.scrollTop = messages.scrollHeight;
+      }
+    </script>
+  </body>
 </html>
