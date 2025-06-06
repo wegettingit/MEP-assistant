@@ -3,25 +3,36 @@
 **MEP** is a prep-centered AI assistant that remembers what humans forget.  
 It helps cooks move smoother, stay ahead, and protect their mental energy.
 
-- 🧠 GPT-powered kitchen assistant
-- 🧾 Tracks prep lists, 86s, family meals
-- ⚖️ Follows real ethics, not just code
-
-## Key Principles (Ethics Logic)
-- **Worker First** — Protect staff, not profits
-- **Transparency** — Always explain changes
-- **Consent-Based** — Ask before flagging stress
-- **Human-Led** — No firing, no punishing
-- **Go Analog** — Let chefs opt out of tech daily
-
-## Status
-> 🟢 Beta live via GPT  
-> 🔗 [Try MEP](https://chatgpt.com/g/g-683117aaa21c81919718d7ccf3802b96-mep)  
-> 🧪 Testing in progress with chefs and cooks
-
-## Vision
-MEP will become the kitchen’s memory — replacing whiteboards and guesswork with real-time logic and compassion. Future versions will include voice-based conscience bots and full Fló integration.
+- 🧠 GPT-powered kitchen assistant (runs local on your computer)
+- 🧾 Tracks prep lists, 86s, family meals, and more
+- ⚖️ Real ethics, not just code — worker-first logic
 
 ---
 
-🧠 Built inside the [johnE.ai](https://johnE.ai) platform
+## 🚦 Status
+> 🟢 **Beta:** Local version now live for real chefs  
+> 🔗 [Try MEP in GPT (cloud)](https://chatgpt.com/g/g-683117aaa21c81919718d7ccf3802b96-mep)  
+> 🧪 Testing in progress (Ollama + Electron desktop app)
+
+---
+
+## 🛠️ Install & Quick Start
+
+**No Java needed! Just Python, Node.js, and Ollama.**
+
+### 1. Prerequisites
+- **Python 3.10+**
+- **Node.js + npm**
+- **Ollama** ([Download here](https://ollama.com/))
+- **Electron Forge** (auto-installed via `npm install`)
+
+### 2. Download & Setup
+
+**Clone or unzip this repo, then:**
+
+```bash
+# (Once, to get dependencies)
+npm install
+
+# (Once, to get the AI model)
+ollama pull llama3:8b
