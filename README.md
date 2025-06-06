@@ -41,8 +41,8 @@ Troubleshooting
     - If it says "missing DLL" or similar, please reinstall or contact support.
 
 - **Still stuck?**
-    - Email: [YOUR EMAIL HERE]
-    - Or open an issue at: [YOUR PROJECT WEBSITE/DISCORD]
+    - Email: [johnethany@icloud.com]
+    - Or open an issue at: [johne.ai]
 
 ---------------------------------------------------
 Uninstall
