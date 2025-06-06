@@ -1,38 +1,62 @@
-# MEP — Mise en Place (AI Kitchen Brain)
+===============================
+MEP Kitchen Assistant (johnE.ai)
+===============================
 
-**MEP** is a prep-centered AI assistant that remembers what humans forget.  
-It helps cooks move smoother, stay ahead, and protect their mental energy.
+Welcome to MEP Assistant — your ethical, AI-powered kitchen copilot built for real cooks, by real cooks.
 
-- 🧠 GPT-powered kitchen assistant (runs local on your computer)
-- 🧾 Tracks prep lists, 86s, family meals, and more
-- ⚖️ Real ethics, not just code — worker-first logic
+---------------------------------------------------
+What is this?
+---------------------------------------------------
+MEP (Mise En Place) Assistant is a desktop app designed to support professional kitchens, clinics, and culinary teams with AI-powered scheduling, inventory, and morale-boosting chat. 
+**Runs entirely on your computer — no cloud, no surveillance, no data selling, ever.**
 
----
+---------------------------------------------------
+Quick Start (First Time Users)
+---------------------------------------------------
 
-## 🚦 Status
-> 🟢 **Beta:** Local version now live for real chefs  
-> 🔗 [Try MEP in GPT (cloud)](https://chatgpt.com/g/g-683117aaa21c81919718d7ccf3802b96-mep)  
-> 🧪 Testing in progress (Ollama + Electron desktop app)
+1. **Install Ollama (Required for AI)**
+   - Download Ollama for Windows: https://ollama.com/
+   - Open the Ollama app, or if you’re comfortable with command line:
+     - Open a terminal (PowerShell or CMD)
+     - Run:   `ollama pull llama3:8b`
 
----
+2. **Start Ollama**
+   - Open the Ollama app from your Start Menu, OR
+   - In a terminal: `ollama run llama3:8b` (or just launch the app)
 
-## 🛠️ Install & Quick Start
+3. **Launch MEP Assistant**
+   - Double-click the **MEP Assistant** icon on your desktop or Start Menu.
+   - You should see a purple chat window. Start typing — MEP will answer instantly, as long as Ollama is running.
 
-**No Java needed! Just Python, Node.js, and Ollama.**
+---------------------------------------------------
+Troubleshooting
+---------------------------------------------------
 
-### 1. Prerequisites
-- **Python 3.10+**
-- **Node.js + npm**
-- **Ollama** ([Download here](https://ollama.com/))
-- **Electron Forge** (auto-installed via `npm install`)
+- **"Error: No response from AI" or "Cannot connect to Ollama":**
+    - Make sure you started Ollama (see step 2 above).
+    - Confirm you have run `ollama pull llama3:8b` at least once.
 
-### 2. Download & Setup
+- **Nothing happens when I open MEP:**
+    - Try running MEP from the install directory in a terminal for error details.
+    - If it says "missing DLL" or similar, please reinstall or contact support.
 
-**Clone or unzip this repo, then:**
+- **Still stuck?**
+    - Email: [YOUR EMAIL HERE]
+    - Or open an issue at: [YOUR PROJECT WEBSITE/DISCORD]
 
-```bash
-# (Once, to get dependencies)
-npm install
+---------------------------------------------------
+Uninstall
+---------------------------------------------------
+- Open "Apps & Features" (Windows Settings) and uninstall "MEP Kitchen Assistant".
+- Or use the Uninstall shortcut in the Start Menu group.
 
-# (Once, to get the AI model)
-ollama pull llama3:8b
+---------------------------------------------------
+Credits & Ethos
+---------------------------------------------------
+Built by johne, powered by johnE.ai and open-source AI (Ollama).  
+**MEP is designed for dignity, hospitality, and human-first tech.**  
+No data leaves your computer. No surveillance, no selling, ever.
+
+---------------------------------------------------
+Enjoy! Now get back to what matters — the food and the people.
+---------------------------------------------------
